@@ -1,0 +1,84 @@
+.wrapper {
+  height: 100%;
+  width: 100%;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-member {
+  width: 60vw;
+  height: 100%;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  background-image: url(../img/bg/member_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.photo_wrapper {
+  height: fit-content;
+  margin-top: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.name {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+iframe {
+  height: 20px;
+  width: 20px;
+  margin: 5px;
+}
+
+.card-name__wrapper {
+  display: flex;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #a9997f;
+  border-radius: 10px;
+  color: #FFF;
+  font-size: 20px;
+}
+
+progress {
+  margin: 5px;
+}
+
+.discount {
+  height: fit-content;
+  display: flex;
+  margin: 5px;
+  padding: 10px 20px;
+  border: 2px solid #a9997f;
+  border-radius: 30px;
+}
+
+.front {
+  display: flex;
+  margin-right: 10px;
+}
+
+.back{
+  right:0;
+}
+
+.barcode{
+  height: 100px;
+}

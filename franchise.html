@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/input.css">
+  <link rel="stylesheet" type="text/css" href="css/card.css">
+  <link rel="stylesheet" type="text/css" href="css/join.css">
+  <link rel="stylesheet" type="text/css" href="css/master.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+  <!-- <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <title>產品一覽-斜陽館</title>
+</head>
+
+
+<body>
+  <nav id="bar">
+    <div id="topbarLeft">
+      <a class="logo" href="index.html">斜陽館<label style="font-size: 0.7vw;margin-left: 1vw;"></label></a>
+    </div>
+    <div class="topBarRight">
+      <ul id="linkBar">
+        <li><a class="part" href="product.html">產品一覽</a></li>
+        <li><a class="part" href="shopSearch.html">門市查詢</a></li>
+        <li><a class="part" href="franchise.html">加盟專區</a></li>
+        <li><a class="part" href="member.html">會員專區</a></li>
+        <li><a class="part" href="">登出</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!--main-->
+  <div class="mainArea"><!--mainArea-->
+    <div class="wrap b-box"><!--wrap-->
+
+      <div class="topBox"><!-- topBox -->
+
+        <div class="titleBox left clearfix"><!--titleBox-->
+          <h2>
+            <em>Creativity <br> Revolution of Tea</em>
+            <p>創業夢想從斜陽館開始</p>
+            <b>加盟線上申請</b>
+          </h2>
+        </div><!--titleBox end-->
+
+      </div><!-- topBox end -->
+
+      <div class="contentBox clearfix"><!--contentBox-->
+        <div class="thankInfo"><!--thankInfo-->
+          歡迎透過加盟表單與我們洽詢加盟相關事項。<br />
+          <span style="color:#c0392b;">*</span> 號為必填訊息。
+        </div><!--thankInfo end-->
+        <div class="formBox clearfix">
+          <!-- formBox -->
+          <form id="service_form" method="post" enctype="multipart/form-data">
+
+            <h6><strong>一、申請者基本資料</strong></h6>
+
+            <div class="g-tv-6">
+              <div class="left"><label for="data_name"><b>1.</b>加盟申請人姓名<em>*</em></label></div>
+              <div class="right"><input type="text" id="data_name" name="data_name" data-note="加盟申請人姓名"
+                  placeholder="請輸入" class="require"></div>
+            </div>
+            <div class="g-tv-6">
+              <div class="left"><label for="data_sex"><b>2.</b>性　　別<em>*</em></label></div>
+              <div class="right">
+                <div class="box">
+                  <input name="data_sex" id="data_sex_01" type="radio" class="radio" value="0" checked>
+                  <label for="data_sex_01"><span></span>先生</label>
+                  <input name="data_sex" id="data_sex_02" type="radio" class="radio" value="1">
+                  <label for="data_sex_02"><span></span>小姐</label>
+                </div>
+              </div>
+            </div>
+            <br class="clear">
+            <div class="g-tv-6">
+              <div class="left"><label for="data_birth"><b>3.</b>出生日期<em>*</em></label></div>
+              <div class="right"><input type="text" id="data_birth" name="data_birth" data-note="出生年月日"
+                  placeholder="請輸入" class="datepicker require"></div>
+            </div>
+            <div class="g-tv-6">
+              <div class="left"><label for="data_age"><b>4.</b>年　　齡<em>*</em></label></div>
+              <div class="right"><input type="text" id="data_age" name="data_age" data-note="年齡" placeholder="請輸入"
+                  class="require"></div>
+            </div>
+            <div class="g-tv-6">
+              <div class="left"><label for="data_marriage"><b>5.</b>婚姻狀況<em>*</em></label></div>
+              <div class="right">
+                <div class="box">
+                  <input name="data_marriage" type="radio" class="radio" id="data_marriage01" value="0" checked />
+                  <label for="data_marriage01"><span></span>未婚</label>
+                  <input name="data_marriage" type="radio" class="radio" id="data_marriage02" value="1" />
+                  <label for="data_marriage02"><span></span>已婚</label>
+                </div>
+              </div>
+            </div>
+            <div class="g-tv-6">
+              <div class="left"><label for="data_child"><b>6.</b>子女人數</label></div>
+              <div class="right"><input type="text" id="data_child" name="data_child" data-note="子女" class="w50">人</div>
+            </div>
+            <div class="g-tv-6">
+              <div class="left"><label for="data_spouse"><b>7.</b>配偶姓名</label></div>
+              <div class="right"><input type="text" id="data_spouse" name="data_spouse" data-note="配偶姓名"
+                  placeholder="請輸入"></div>
+            </div>
+            <div class="g-tv-6">
+              <div class="left"><label for="data_job_spouse"><b>8.</b>配偶職業</label></div>
+              <div class="right"><input type="text" id="data_job_spouse" name="data_job_spouse" data-note="配偶職業"
+                  placeholder="請輸入"></div>
+            </div>
+            <div class="g-tv-6">
+              <div class="left"><label for="data_father"><b>9.</b>父親姓名<em>*</em></label></div>
+              <div class="right"><input type="text" id="data_father" name="data_father" data-note="父親姓名"
+                  placeholder="請輸入" class="require"></div>
+            </div>
+            <div class="g-tv-6">
+              <div class="left"><label for="data_job_father"><b>10.</b>父親職業<em>*</em></label></div>
+              <div class="right"><input type="text" id="data_job_father" name="data_job_father" data-note="父親職業"
+                  placeholder="請輸入" class="require"></div>
+            </div>
+            <div class="g-tv-6">
+              <div class="left"><label for="data_mother"><b>11.</b>母親姓名<em>*</em></label></div>
+              <div class="right"><input type="text" id="data_mother" name="data_mother" data-note="母親姓名"
+                  placeholder="請輸入" class="require"></div>
+            </div>
+            <div class="g-tv-6">
+              <div class="left"><label for="data_job_mother"><b>12.</b>母親職業<em>*</em></label></div>
+              <div class="right"><input type="text" id="data_job_mother" name="data_job_mother" data-note="母親職業"
+                  placeholder="請輸入" class="require"></div>
+            </div>
+            <div class="g-tv-12">
+              <div class="left"><label for="data_photo"><b>13.</b>個人照片<em>*</em></label></div>
+              <div class="right"><input type="file" id="data_photo" name="data_photo" data-note="個人照片" class="require">
+              </div>
+              <p class="formNote" style="clear:both; margin-bottom: 30px;">請上傳近期個人清晰照片一張，僅接受2MB以下的jpg,png檔案</p>
+            </div>
+
+            <h6><strong>二、聯絡資料</strong></h6>
+
+            <div class="g-tv-6">
+              <div class="left"><label for="data_address"><b>1.</b>戶籍地址<em>*</em></label></div>
+              <div class="right"><input type="text" id="data_address" name="data_address" data-note="戶籍地址"
+                  placeholder="請輸入" class="require"></div>
+            </div>
+            <div class="g-tv-6">
+              <div class="left"><label for="data_address_live"><b>2.</b>居住地址<em>*</em></label></div>
+              <div class="right"><input type="text" id="data_address_live" name="data_address_live" data-note="居住地址"
+                  placeholder="請輸入" class="require"></div>
+            </div>
+            <div class="g-tv-6">
+              <div class="left"><label for="data_mobie_phone"><b>3.</b>行動電話<em>*</em></label></div>
+              <div class="right"><input type="text" id="data_mobie_phone" name="data_mobie_phone" data-note="行動電話"
+                  placeholder="ex.0912123456" class="require"></div>
+            </div>
+            <div class="g-tv-6">
+              <div class="left"><label for="data_telephone"><b>4.</b>電　　話<em>*</em></label></div>
+              <div class="right"><input type="text" id="data_telephone" name="data_telephone" data-note="電話"
+                  placeholder="ex.04-23109999" class="require"></div>
+            </div>
+            <div class="g-tv-12">
+              <div class="left"><label for="data_telephone"><b>5.</b>E-mail<em>*</em></label></div>
+              <div class="right"><input type="text" id="data_email" name="data_email" data-note="E-mail"
+                  placeholder="ex.name@gmail.com" class="require"></div>
+            </div>
+
+            <h6><strong>三、最高學歷</strong></h6>
+
+            <br class="clear">
+            <div class="g-tv-6">
+              <div class="left"><label for="data_school"><b>1.</b>學校<em>*</em></label></div>
+              <div class="right"><input type="text" id="data_schoo_school" name="data_schoo_school" data-note="學校"
+                  placeholder="請輸入" class="require"></div>
+            </div>
+            <div class="g-tv-6">
+              <div class="left"><label for="data_department"><b>2.</b>科系<em>*</em></label></div>
+              <div class="right"><input type="text" id="data_department" name="data_department" data-note="科系"
+                  placeholder="請輸入" class="require"></div>
+            </div>
+            <div class="g-tv-6">
+              <div class="left"><label for="data_license"><b>3.</b>證照</label></div>
+              <div class="right"><input type="text" id="data_license" name="data_license" data-note="證照"
+                  placeholder="請輸入"></div>
+            </div>
+            <div class="g-tv-6">
+              <div class="left"><label for="data_expertise"><b>4.</b>專長<em>*</em></label></div>
+              <div class="right"><input type="text" id="data_expertise" name="data_expertise" data-note="專長"
+                  placeholder="請輸入" class="require"></div>
+            </div>
+
+            <h6><strong>四、目前工作</strong></h6>
+
+            <div class="g-tv-12">
+              <div class="left"><label for="data_experience">是否待業中</label></div>
+              <div class="right">
+                <div class="box">
+                  <input name="data_nojob" type="radio" class="radio" id="data_nojob_no" value="0"
+                    onClick="turnOn('data_current_job', 'data_job_title', 'data_income')" />
+                  <label for="data_nojob_no"><span></span>否</label>
+                  <input name="data_nojob" type="radio" class="radio" id="data_nojob_yes" value="1"
+                    onClick="turnOff('data_current_job', 'data_job_title', 'data_income')" checked />
+                  <label for="data_nojob_yes"><span></span>是</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="g-tv-4">
+              <div class="left"><label id="label_data_current_job" for="data_current_job"><b>1.</b>行業別</label></div>
+              <div class="right"><input type="text" id="data_current_job" name="data_current_job" data-note="目前工作行業行業別"
+                  placeholder="請輸入" disabled></div>
+            </div>
+            <div class="g-tv-4">
+              <div class="left"><label id="label_data_job_title" for="data_job_title"><b>2.</b>職　稱</label></div>
+              <div class="right"><input type="text" id="data_job_title" name="data_job_title" data-note="目前職稱"
+                  placeholder="請輸入" disabled></div>
+            </div>
+            <div class="g-tv-4">
+              <div class="left"><label id="label_data_income" for="data_income"><b>3.</b>月收入</label></div>
+              <div class="right"><input type="text" id="data_income" name="data_income" data-note="目前月收入"
+                  placeholder="ˇ單位：新台幣" disabled></div>
+            </div>
+
+            <h6><strong>五、工作經歷 (必填，至少填一組)</strong></h6>
+
+            <div class="required_group1">
+              <div class="g-tv-4">
+                <div class="left"><label for="data_company_1">公司名稱<em>*</em></label></div>
+                <div class="right"><input type="text" id="data_company_1" name="data_company_1" data-note="公司名稱"
+                    placeholder="請輸入" class="require"></div>
+              </div>
+              <div class="g-tv-4">
+                <div class="left"><label for="data_company_job_title_1">職　稱<em>*</em></label></div>
+                <div class="right"><input type="text" id="data_company_job_title_1" name="data_company_job_title_1"
+                    data-note="職稱" placeholder="請輸入" class="require"></div>
+              </div>
+              <div class="g-tv-4">
+                <div class="left"><label for="data_company_income_1">月收入<em>*</em></label></div>
+                <div class="right"><input type="text" id="data_company_income_1" name="data_company_income_1"
+                    data-note="月收入" placeholder="請輸入" class="require"></div>
+              </div>
+            </div>
+
+            <br class="clear">
+            <div class="required_group2">
+              <div class="g-tv-4">
+                <div class="left"><label for="data_company_2">公司名稱</label></div>
+                <div class="right"><input type="text" id="data_company_2" name="data_company_2" data-note="公司名稱"
+                    placeholder="請輸入" class="require"></div>
+              </div>
+              <div class="g-tv-4">
+                <div class="left"><label for="data_company_job_title_2">職　稱</label></div>
+                <div class="right"><input type="text" id="data_company_job_title_2" name="data_company_job_title_2"
+                    data-note="職稱" placeholder="請輸入" class="require"></div>
+              </div>
+              <div class="g-tv-4">
+                <div class="left"><label for="data_company_income_2">月收入</label></div>
+                <div class="right"><input type="text" id="data_company_income_2" name="data_company_income_2"
+                    data-note="月收入" placeholder="請輸入" class="require"></div>
+              </div>
+              <!--送出按鈕-->
+              <div class="send">
+                <a class="submit" id="submit_btn">確認送出</a><i id="submit_loading_icon" class="fa fa-spinner fa-spin"
+                  style="display:none"></i>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="l-footer__img-mask">
+      <img src="img/bg/franchise_bg.jpg" alt="背景">
+    </div>
+  </div>
+
+</body>
+
+</html>

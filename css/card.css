@@ -1,0 +1,121 @@
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.change {
+  top: 20px;
+  padding: 1rem 5rem;
+  display: flex;
+  align-items: center;
+}
+
+.l-tea .c-card {
+  background-color: rgba(153, 159, 89, 0.8);
+}
+
+.l-pastry .c-card {
+  background-color: #ECE2D0;
+}
+
+.c-card {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: block;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 1.2rem;
+  /* margin: 1rem 1.5rem 1rem 0; */
+  border-radius: 10px;
+  /* background-color: rgba(153, 159, 89, 0.8); */
+  color: #000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.l-tea .c-card:hover {
+  opacity: 0.8;
+  background-color: rgba(138, 77, 50, 0.5);
+  /* color: #000; */
+}
+
+.l-pastry .c-card:hover {
+  opacity: 0.8;
+  background-color: rgba(138, 77, 50, 0.4);
+  /* color: #000; */
+}
+
+.c-card__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.2rem 1rem 0 1rem;
+}
+
+
+.c-card__content {
+  padding-bottom: 0;
+}
+
+.c-card__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.c-card__desc {
+  margin-bottom: 5px;
+}
+
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  /* 通过改变animation-timing-function 制作弹性切换效果 */
+  transition: 2s cubic-bezier(0.68, -0.4, 0.27, 1.34) 0.2s;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.button{
+  z-index: 20;
+}
+
+.footer{
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  opacity: 0.2;
+  z-index: -1;
+}

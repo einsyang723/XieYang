@@ -1,0 +1,66 @@
+.radioChange {
+  margin-top: 15vh;
+}
+
+#radio {
+  margin-left: 5rem;
+}
+
+#radio input[type="radio"] {
+  display: none;
+  margin-top: 10px;
+}
+
+#radio input:checked+.button {
+  background: rgb(153, 159, 89);
+  color: #fff;
+  cursor: pointer;
+}
+
+.button {
+  display: inline-block;
+  margin: 0 5px 10px 1rem;
+  padding: 20px 30px;
+  background: #f7f7f7;
+  color: #333;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 10;
+}
+
+.button:hover {
+  background: #bbb;
+  color: #fff;
+}
+
+.round {
+  border-radius: 5px;
+}
+
+.c-sec {
+  height: 80vh;
+  margin: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.send {
+  position: absolute;
+  right: 2vw;
+  display: inline-block;
+  margin: 0 5px 10px 1rem;
+  padding: 20px 30px;
+  background: #f7f7f7;
+  color: #333;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 10;
+  border-radius: 5px;
+}
+
+.send:hover {
+  background: #bbb;
+  color: #fff;
+}
