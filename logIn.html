@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/logIn.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
@@ -22,11 +23,13 @@
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <!-- <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script> -->
   <script type="text/javascript" src="js/load.js"></script>
-  <title>斜陽館</title>
+  <title>登入-斜陽館</title>
 </head>
 
 
 <body>
+
+
   <nav id="bar">
     <div id="topbarLeft">
       <a class="logo" href="index.html">斜陽館<label style="font-size: 0.7vw;margin-left: 1vw;"></label></a>
@@ -37,7 +40,6 @@
         <li><a class="part" href="shopSearch.html">門市查詢</a></li>
         <li><a class="part" href="franchise.html">加盟專區</a></li>
         <li><a class="part" href="member.html">會員專區</a></li>
-        <li><a id="logIn" class="part" href="logIn.html">登入</a></li>
       </ul>
 
     </div>
@@ -57,25 +59,79 @@
 
       <img id="word" src="img/home/word.png" height="320px" width="480px" alt="">
 
+      <div class="login_page">
+        <div id="container1">
+          <div class="login">
+            <h1>登入 Login</h3>
+
+              <form action="member.php" method="post">
+                <input type="text" id="username" class="text" name="username" placeholder="帳號" required>
+                <div class="tab"></div>
+                <input type="password" id="password" class="text" name="password" placeholder="密碼" required>
+                <div class="tab"></div>
+                <input type="submit" value="登入" class="submit">
+              </form>
+              <?php if ($_GET['sig_suc']!=''): ?>
+              <?php echo $_GET['sig_suc'] ?>
+              <?php endif; ?>
+              <?php if ($_GET['error']!=''): ?>
+              <?php echo $_GET['error'] ?>
+              <?php endif; ?>
+
+              <h5 class="btn" onclick="show_hide()">註冊帳號</h5>
+
+          </div><!-- login end-->
+        </div><!-- container1 end-->
+      </div><!-- login_page end-->
+
+      <div class="signup_page" <div id="container2">
+
+        <div class="signup">
+
+          <h3>註冊 Sign Up</h3>
+
+          <form action="用戶管理.php">
+            <input type="text" id="fullname" name="fullname" placeholder="使用者全名" required>
+            <div class="tab"></div>
+            <input type="text" id="username2" name="username" placeholder="帳號" required>
+            <div class="tab"></div>
+            <input type="text" id="password2" name="password" placeholder="密碼" required>
+            <div class="tab"></div>
+            <input type="text" id="comfirm_password" name="comfirm_password" placeholder="確認密碼" required>
+            <div class="tab"></div>
+            <input type="submit" value="註冊" class="submit">
+          </form>
+
+          <h5 onclick="show_hide()">登入帳號</h5>
+
+        </div><!-- signup end-->
+      </div><!-- container2 end-->
+    </div><!-- signup_page end-->
+
+    <div id="copyright">
+      <h4>Copyright © 2023 XieYang All rights reserved</h4>
     </div>
 
-    <div style="background-color: #fafafa" id="page2" class="page">
-      <img id="bg" src="img/home/bg.jpg" height="600px" width="1100px">
-      <img id="desk" src="img/home/desk.jpg" height="260px" width="260px">
-      <img id="house" src="img/home/house.jpg" height="270px" width="270px">
-    </div>
-
-    <div style="background-color: #fefefb" id="page3" class="page">
-      <img id="bg2" src="img/home/bg2.jpg" height="600px" width="1100px">
-      <img id="tea" src="img/home/tea.jpg" height="270px" width="370px">
-      <img id="cookie" src="img/home/cookie.jpg" height="200px" width="260px">
-      <p id="content">
-        在距今數百年前的江戶時代，<br>
-        茶道文化便開始在日本蓬勃發展，<br>
-        茶點也因此成為了一個重要的文化藝術。
-      </p>
-    </div>
   </div>
+  <!-- <div class="footer">
+      <div class="l-footer__img-mask">
+        <img src="img/bg/product_bg_1.jpg" alt="背景">
+      </div>
+    </div> -->
+  <!-- <div class="c-login">
+      <div class="title_wrap">
+        <div class="c-card__title">會員登入</div>
+        <div>請先登入會員方可享優惠</div>
+      </div>
+      <div>
+        <div>帳號</div>
+        <div>密碼</div>
+      </div>
+    </div> -->
+  </div>
+
+
+  </script>
 </body>
 
 </html>
