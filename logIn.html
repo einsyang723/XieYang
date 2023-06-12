@@ -22,6 +22,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <!-- <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script> -->
+  <script type="text/javascript" src="js/main.js"></script>
   <script type="text/javascript" src="js/load.js"></script>
   <title>登入-斜陽館</title>
 </head>
@@ -37,6 +38,7 @@
     <div>
       <ul id="linkBar">
         <li><a class="part" href="product.html">產品一覽</a></li>
+        <li><a class="part" href="shopping.html">線上選購</a></li>
         <li><a class="part" href="shopSearch.html">門市查詢</a></li>
         <li><a class="part" href="franchise.html">加盟專區</a></li>
         <li><a class="part" href="member.html">會員專區</a></li>
@@ -62,76 +64,59 @@
       <div class="login_page">
         <div id="container1">
           <div class="login">
-            <h1>登入 Login</h3>
-
-              <form action="member.php" method="post">
-                <input type="text" id="username" class="text" name="username" placeholder="帳號" required>
+            <div class="wrap">
+              <form>
+                <h1>登入 Login</h1>
+                <input type="text" id="account" class="text" name="account" placeholder="帳號" required>
                 <div class="tab"></div>
                 <input type="password" id="password" class="text" name="password" placeholder="密碼" required>
+                <div class="message"></div>
                 <div class="tab"></div>
-                <input type="submit" value="登入" class="submit">
+                <input type="button" value="登入" class="submit btn_logIn">
               </form>
-              <?php if ($_GET['sig_suc']!=''): ?>
-              <?php echo $_GET['sig_suc'] ?>
-              <?php endif; ?>
-              <?php if ($_GET['error']!=''): ?>
-              <?php echo $_GET['error'] ?>
-              <?php endif; ?>
-
-              <h5 class="btn" onclick="show_hide()">註冊帳號</h5>
+              <h5 class="btn_goSign" onclick="show_hide()">註冊帳號</h5>
+            </div>
 
           </div><!-- login end-->
         </div><!-- container1 end-->
       </div><!-- login_page end-->
 
-      <div class="signup_page" <div id="container2">
+      <div class="signup_page">
+        <div id="container2">
+          <div class="signup">
+            <div class="wrap">
+              <h1>註冊 Sign Up</h1>
+              <form>
+                <input type="text" id="nickName" class="text" name="nickName" placeholder="暱稱" required>
+                <div class="tab"></div>
+                <input type="text" id="account2" class="text" name="account" placeholder="帳號" required>
+                <div class="tab"></div>
+                <input type="password" id="password2" class="text" name="password" placeholder="密碼" required>
+                <div class="tab"></div>
+                <input type="password" id="comfirm_password" class="text" name="comfirm_password" placeholder="確認密碼"
+                  required>
+                <div class="message"></div>
+                <div class="tab"></div>
+                <input type="email" id="email" class="text" name="email" placeholder="電子信箱" required>
+                <div class="tab"></div>
+                <input type="text" id="phone" class="text" name="phone" placeholder="電話號碼" required>
+                <div class="tab"></div>
+                <input type="button" value="註冊" class="submit btn_signUp">
+              </form>
+              <h5 class="btn_goSign" onclick="show_hide()">登入帳號</h5>
+            </div>
 
-        <div class="signup">
+          </div><!-- signup end-->
+        </div><!-- container2 end-->
+      </div><!-- signup_page end-->
 
-          <h3>註冊 Sign Up</h3>
+      <div id="copyright">
+        <h4>Copyright © 2023 XieYang All rights reserved</h4>
+      </div>
 
-          <form action="用戶管理.php">
-            <input type="text" id="fullname" name="fullname" placeholder="使用者全名" required>
-            <div class="tab"></div>
-            <input type="text" id="username2" name="username" placeholder="帳號" required>
-            <div class="tab"></div>
-            <input type="text" id="password2" name="password" placeholder="密碼" required>
-            <div class="tab"></div>
-            <input type="text" id="comfirm_password" name="comfirm_password" placeholder="確認密碼" required>
-            <div class="tab"></div>
-            <input type="submit" value="註冊" class="submit">
-          </form>
-
-          <h5 onclick="show_hide()">登入帳號</h5>
-
-        </div><!-- signup end-->
-      </div><!-- container2 end-->
-    </div><!-- signup_page end-->
-
-    <div id="copyright">
-      <h4>Copyright © 2023 XieYang All rights reserved</h4>
     </div>
-
-  </div>
-  <!-- <div class="footer">
-      <div class="l-footer__img-mask">
-        <img src="img/bg/product_bg_1.jpg" alt="背景">
-      </div>
-    </div> -->
-  <!-- <div class="c-login">
-      <div class="title_wrap">
-        <div class="c-card__title">會員登入</div>
-        <div>請先登入會員方可享優惠</div>
-      </div>
-      <div>
-        <div>帳號</div>
-        <div>密碼</div>
-      </div>
-    </div> -->
   </div>
 
-
-  </script>
 </body>
 
 </html>
