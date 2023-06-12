@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/input.css"><!-- radio change -->
   <link rel="stylesheet" type="text/css" href="css/card.css">
+  <link rel="stylesheet" type="text/css" href="css/shopping.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +21,7 @@
   <!-- <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script> -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/shopping.js"></script>
   <title>產品一覽-斜陽館</title>
 </head>
 
@@ -47,6 +49,28 @@
       <label><input type="radio" name="pattern" value="pastry" onclick="pastry(event)"><span
           class="round button">糕點</span></label>
     </div>
+    <div class="shoppingCart">
+        <button type="button" class="popup-button" onclick="showPopup()">
+            <img class="shoppingCart" src="img/icon/shoppingCart.png" alt="購物車">
+        </button>
+        <div id="popup" class="popup">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <p>購物車</p><br/>
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>品項</th>
+                        <th>數量</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <label for="datetime-input">選擇來店日期跟時間：</label>
+            <input type="datetime-local" id="datetime-input" name="datetime-input">
+            <button id="button" onclick="enter();">送出訂單</button>
+        </div>
+    </div>
     <div class="c-sec">
       <section class="change l-tea">
         <div class="swiper-container">
@@ -59,17 +83,7 @@
                 <div class="c-card__body">
                   <div class="c-card__content">
                     <h3 class="c-card__title">抹茶</h3>
-                    <p class="c-card__desc">
-                      茶葉在栽培過程和玉露一樣需要覆蓋以阻絕陽光的照射，也是決定抹茶品質的關鍵。
-                    </p>
-                    <p class="c-card__desc">
-                      製作上，將摘下的茶葉蒸青並乾燥後，
-                      去除茶莖再碾碎成粉末，便成為大家常見的抹茶了，是各色甜點界的熱門常客。
-                    </p>
-                    <p class="c-card__desc">
-                      日本的傳統茶道所用的茶，便是以抹茶為主，
-                      除了能沖泡直接喝，在料理、和菓子、蛋糕中也很常使用。
-                    </p>
+                    <button id="Btn0" class="Btn" >加入購物車</button>
                   </div>
                 </div>
               </article>
@@ -82,12 +96,7 @@
                 <div class="c-card__body">
                   <div class="c-card__content">
                     <h3 class="c-card__title">焙茶</h3>
-                    <p class="c-card__desc">
-                      日文寫作ほうじ茶，其作法是將煎茶、莖茶等的茶葉用約200度的高溫大火炒過，使茶葉呈現褐色，並引出香氣。
-                    </p>
-                    <p class="c-card__desc">
-                      焙炒過程中咖啡因會流失，因此老少皆宜，喝起來也幾乎沒有苦澀味，此外，焙茶的香氣濃烈而獨特，因此非常受到歡迎。
-                    </p>
+                    <button id="Btn1" class="Btn">加入購物車</button>
                   </div>
                 </div>
               </article>
@@ -100,16 +109,7 @@
                 <div class="c-card__body">
                   <div class="c-card__content">
                     <h3 class="c-card__title">煎茶</h3>
-                    <p class="c-card__desc">
-                      最常見的一種日本茶，使用新鮮摘取的茶葉新芽蒸製而成，略帶苦澀的味道但保有新芽的清爽香氣是它的特徵。
-                    </p>
-                    <p class="c-card__desc">
-                      煎茶又分為普通煎茶和深蒸煎茶，以蒸炒茶葉的時間來作區分，
-                      一般稱的煎茶指的即是以標準時間蒸製新鮮茶葉的淺蒸煎茶，而「深蒸煎茶」則是比普通煎茶的蒸製時間長上2到3倍。
-                    </p>
-                    <p class="c-card__desc">
-                      後者由於蒸製時間較長，形狀變得較細碎，可抑制茶的苦澀，使味道變得較濃厚滑順。
-                    </p>
+                    <button id="Btn2" class="Btn">加入購物車</button>
                   </div>
                 </div>
               </article>
@@ -122,12 +122,7 @@
                 <div class="c-card__body">
                   <div class="c-card__content">
                     <h3 class="c-card__title">玄米茶</h3>
-                    <p class="c-card__desc">
-                      將浸泡過的糙米炒香後，再混入等量的煎茶中，成為同時帶著米香及茶香的玄米茶。
-                    </p>
-                    <p class="c-card__desc">
-                      和焙茶一樣，玄米茶也屬於再加工茶，由於米和茶葉的比例各半，茶葉用量較少，因此咖啡因含量也較低，風味清爽而馥郁，小孩或老人都能安心享用。
-                    </p>
+                    <button id="Btn3" class="Btn">加入購物車</button>
                   </div>
                 </div>
               </article>
@@ -140,12 +135,7 @@
                 <div class="c-card__body">
                   <div class="c-card__content">
                     <h3 class="c-card__title">玉露</h3>
-                    <p class="c-card__desc">
-                      日本茶中的高級品，製作方法與煎茶相同，但玉露茶在嫩芽採收前須先經過約20天的覆蓋，阻隔陽光直接照射，減少了苦澀味道，增加其甘甜與清香。
-                    </p>
-                    <p class="c-card__desc">
-                      玉露擁有獨特的海苔般的香氣，茶色明亮翠綠，含有豐富的兒茶酚和胺基酸。沖泡玉露需使用較低的水溫，才不會讓茶水產生澀味。
-                    </p>
+                    <button id="Btn4" class="Btn">加入購物車</button>
                   </div>
                 </div>
               </article>
@@ -167,9 +157,7 @@
                 <div class="c-card__body">
                   <div class="c-card__content">
                     <h3 class="c-card__title">和三盆糖打菓子</h3>
-                    <p class="c-card__desc">
-                      和三盆糖是日本特有的砂糖，顆粒細緻且風味絕佳，以和三盆糖加上些許清水，倒入木製模具中用力壓實，再從木模中取出便製成這道點心。
-                    </p>
+                    <button id="Btn5" class="Btn" >加入購物車</button>
                   </div>
                 </div>
               </article>
@@ -182,9 +170,7 @@
                 <div class="c-card__body">
                   <div class="c-card__content">
                     <h3 class="c-card__title">大福</h3>
-                    <p class="c-card__desc">
-                      糯米蒸軟後搗碎成看不見米粒的麵糰（麻糬），包入帶皮碎紅豆粒餡而製成的點心。在麻糬麵糰中混入煮過的紅豌豆，就成了「豆大福」。
-                    </p>
+                    <button id="Btn6" class="Btn">加入購物車</button>
                   </div>
                 </div>
               </article>
@@ -197,9 +183,7 @@
                 <div class="c-card__body">
                   <div class="c-card__content">
                     <h3 class="c-card__title">最中</h3>
-                    <p class="c-card__desc">
-                      搗米做成麻糬，擀成薄片後放入模具烤過，再包入餡料而製成的點心。
-                    </p>
+                    <button id="Btn7" class="Btn" >加入購物車</button>
                   </div>
                 </div>
               </article>
@@ -212,9 +196,7 @@
                 <div class="c-card__body">
                   <div class="c-card__content">
                     <h3 class="c-card__title">栗蒸羊羹</h3>
-                    <p class="c-card__desc">
-                      在去皮紅豆沙餡中加入麵粉攪拌出黏性，再加入太白粉水等材料，倒入模具中蒸過後，在表面上方鑲入切成兩半的蜜漬栗子，再蒸一次後切成四角形的點心。
-                    </p>
+                    <button id="Btn8" class="Btn" >加入購物車</button>
                   </div>
                 </div>
               </article>
@@ -227,9 +209,7 @@
                 <div class="c-card__body">
                   <div class="c-card__content">
                     <h3 class="c-card__title">海綿蛋糕</h3>
-                    <p class="c-card__desc">
-                      麵粉與雞蛋、砂糖、水飴、蜂蜜等仔細攪拌後，用烤箱所烤製而成的點心。
-                    </p>
+                    <button id="Btn9" class="Btn">加入購物車</button>
                   </div>
                 </div>
               </article>
@@ -242,9 +222,7 @@
                 <div class="c-card__body">
                   <div class="c-card__content">
                     <h3 class="c-card__title">煉切</h3>
-                    <p class="c-card__desc">
-                      白餡加入山藥與求肥攪拌製成的煉切餡包入去皮紅豆沙餡，再加上四季風情色彩與造型等各種不同的創意所做出的點心。
-                    </p>
+                    <button id="Btn10" class="Btn">加入購物車</button>
                   </div>
                 </div>
               </article>
@@ -257,10 +235,7 @@
                 <div class="c-card__body">
                   <div class="c-card__content">
                     <h3 class="c-card__title">糰子</h3>
-                    <p class="c-card__desc">
-                      米穀粉加水蒸過後放入石臼搗成麵糰，切成小塊後揉成圓球，在串好的糰子上放上去皮紅豆沙餡而製成的「紅豆糰子」以及將串起來的糰子烤熱，
-                      淋上醬油、昆布高湯、砂糖、葛粉與水加熱製成的蜜汁而製成的「御手洗糰子」。一般一支竹籤會串上4顆糰子。
-                    </p>
+                    <button id="Btn11" class="Btn">加入購物車</button>
                   </div>
                 </div>
               </article>
@@ -273,9 +248,7 @@
                 <div class="c-card__body">
                   <div class="c-card__content">
                     <h3 class="c-card__title">葛櫻</h3>
-                    <p class="c-card__desc">
-                      將葛粉溶於溫水中，加入水、砂糖與水飴加熱製成麵糰，包入去皮紅豆沙餡，蒸至整體呈透明後便製成這道點心。
-                    </p>
+                    <button id="Btn12" class="Btn">加入購物車</button>
                   </div>
                 </div>
               </article>
@@ -288,9 +261,7 @@
                 <div class="c-card__body">
                   <div class="c-card__content">
                     <h3 class="c-card__title">銅鑼燒</h3>
-                    <p class="c-card__desc">
-                      麵粉加入雞蛋、砂糖、蜂蜜與水攪拌，放在銅板上烘烤，再夾入餡料而製成的點心。
-                    </p>
+                    <button id="Btn13" class="Btn">加入購物車</button>
                   </div>
                 </div>
               </article>
@@ -303,9 +274,7 @@
                 <div class="c-card__body">
                   <div class="c-card__content">
                     <h3 class="c-card__title">香魚燒</h3>
-                    <p class="c-card__desc">
-                      麵粉加入砂糖、煉乳、雞蛋等材料攪拌後，用銅板煎烤成橢圓形，再包入求肥（米穀粉、砂糖、糖漿、水攪拌後加熱製成的材料），用烙棒烙出香魚造型的點心。
-                    </p>
+                    <button id="Btn14" class="Btn" >加入購物車</button>
                   </div>
                 </div>
               </article>

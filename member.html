@@ -20,6 +20,7 @@
   <!-- <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script> -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/radioChange.js"></script>
   <title>產品一覽-斜陽館</title>
 </head>
 
@@ -32,6 +33,7 @@
     <div class="topBarRight">
       <ul id="linkBar">
         <li><a class="part" href="product.html">產品一覽</a></li>
+        <li><a class="part" href="shopping.html">線上選購</a></li>
         <li><a class="part" href="shopSearch.html">門市查詢</a></li>
         <li><a class="part" href="franchise.html">加盟專區</a></li>
         <li><a class="part" href="member.html">會員專區</a></li>
@@ -39,7 +41,38 @@
       </ul>
     </div>
   </nav>
-  <div class="wrapper">
+  <div id="radio">
+    <label><input type="radio" name="pattern" value="hasAlreadyPaid" checked="checked" onclick="hasAlreadyPaid(event)"><span
+        class="round button">已付款</span></label>
+    <label><input type="radio" name="pattern" value="notYet" onclick="notYet(event)"><span
+        class="round button">未付款</span></label>
+  </div>
+  <div class="c-sec">
+    <section class="change l-hasAlreadyPaid">
+      <table id="table-hasAlreadyPaid">
+        <thead>
+            <tr>
+                <th>來店時間</th>
+                <th>商品</th>
+                <th>桌號</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+    <section class="change l-notYet" style="display: none;">
+      <table id="table-notYet">
+        <thead>
+            <tr>
+                <th>來店時間</th>
+                <th>商品</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </div>
+  <!-- <div class="wrapper">
     <div class="c-member">
       <div class="photo_wrapper">
         <div class="photo">
@@ -76,7 +109,7 @@
 
     </div>
 
-  </div>
+  </div> -->
 
 </body>
 

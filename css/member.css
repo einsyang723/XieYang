@@ -82,3 +82,12 @@ progress {
 .barcode{
   height: 100px;
 }
+
+#radio{
+  position: absolute;
+  top:190px;
+}
+.c-sec{
+  position: absolute;
+  top:290px;
+}

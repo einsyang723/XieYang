@@ -119,3 +119,29 @@ img {
   opacity: 0.2;
   z-index: -1;
 }
+
+.Btn{
+  
+    /* 背景顏色 */
+    background-color: #683b29e7;
+    /* 文字顏色 */
+    color: white;
+    /* 文字大小 */
+    font-size: 16px;
+    /* 邊框 */
+    border: none;
+    /* 圓角 */
+    border-radius: 4px;
+    /* 內距 */
+    padding: 10px 20px;
+    /* 游標樣式 */
+    cursor: pointer;
+  }
+  
+  /* 按下效果 */
+  .Btn:active {
+    /* 按下時的背景顏色 */
+    background-color: #ac745e62;
+  
+  
+}
