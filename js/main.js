@@ -1,11 +1,3 @@
-var customerId = "";
-var customerName = "";
-var customerMail = "";
-var customerPhone = "";
-var customerLevel = 1;
-var customerTotal = 0;
-var customerCoupon = "";
-
 function show_hide() {
   var login = document.getElementById("container1");
   var signup = document.getElementById("container2");
@@ -43,16 +35,15 @@ $(document).ready(function () {
         data: JSON.stringify({ 'account': account, 'password': password }),
         success: function (data) {
           if (data.check == true) {
-            customerId = data.account
-            console.log(customerId);
-            customerName = data.name;
-            customerMail = data.email;
-            customerPhone = data.phone;
-            customerTotal = 0;  //還沒改
-            customerLevel = calLevel(customerTotal);
-            customerCoupon = "";  //還沒改
+            document.cookie = 'account=' + encodeURIComponent(data.account);
+            document.cookie = 'name=' + encodeURIComponent(data.name);
+            document.cookie = 'email=' + encodeURIComponent(data.email);
+            document.cookie = 'phone=' + encodeURIComponent(data.phone);
+            document.cookie = 'total=' + encodeURIComponent(data.total);
+            document.cookie = 'level=' + encodeURIComponent(calLevel(data.total));
+            document.cookie = 'coupon=' + encodeURIComponent(data.coupon);
+            // cookie = parseCookie();
             location.href = '././index.html';
-            showAccount();
           } else {
             $('.message').addClass("show");
             $('.message').text("帳號或密碼錯誤");
@@ -100,18 +91,49 @@ $(document).ready(function () {
   })
 })
 
-function showAccount() {
-  if (customerId != "") {
-    $('#logIn').text = "歡迎, " + customerName;
-  }
-}
+
+// function parseCookie() {
+//   var cookieObj = {};
+//   var cookieAry = document.cookie.split(';');
+//   var cookie;
+
+//   for (var i = 0, l = cookieAry.length; i < l; ++i) {
+//     cookie = jQuery.trim(cookieAry[i]);
+//     cookie = cookie.split('=');
+//     cookieObj[cookie[0]] = cookie[1];
+//   }
+
+//   return cookieObj;
+// }
+
+
+// function getCookieByName(name) {
+//   var value = parseCookie()[name];
+//   if (value) {
+//     value = decodeURIComponent(value);
+//   }
+
+//   return value;
+// }
+
+// function showAccount(customerName) {
+//   if (customerName != "") {
+//     if (!document.getElementById("logIn") == null){
+//       let welcome = document.getElementById("logIn");
+//       welcome.innerHTML = "歡迎, " + customerName;
+//       console.log(welcome.innerHTML);
+//     }
+//     // $('#logIn').text = "歡迎, " + customerName;
+//   }
+// }
 
 function calLevel(customerTotal) {
   let tmp = Math.trunc(customerTotal / 100);
   let level = 1;
-  while (tmp > 1) {
+  while (tmp >= 1) {
     tmp /= 2;
     level += 1;
+    console.log(level)
   }
   return level;
 }

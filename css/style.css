@@ -11,6 +11,17 @@
     align-items: center;
 }
 
+#member{
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    background-color: #8a4d3200;
+}
+
 .part {
     color: #fff;
     font-size: 24px;
@@ -27,6 +38,7 @@
     color: #8a4c32be;
     transition: 0.5s;
 }
+
 
 a.logo {
     text-decoration: none;

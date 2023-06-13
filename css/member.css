@@ -70,24 +70,69 @@ progress {
   border-radius: 30px;
 }
 
+.discount:hover {
+  cursor: pointer;
+  background-color: #a9997f;
+  color: #FFF;
+}
+
 .front {
   display: flex;
   margin-right: 10px;
 }
 
-.back{
-  right:0;
+.back {
+  right: 0;
 }
 
-.barcode{
+.barcode {
   height: 100px;
 }
 
-#radio{
+#radio {
   position: absolute;
-  top:190px;
+  top: 190px;
 }
-.c-sec{
+
+.c-sec {
   position: absolute;
-  top:290px;
+  top: 290px;
+}
+
+.jumpCoupon.show {
+  position: fixed;
+  height: fit-content;
+  top: 35vh;
+  left: auto;
+  padding: 20px 25px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 2px solid #a9997f;
+  box-shadow: rgba(44, 44, 46, 0.959) 0px 7px 29px 0px;
+}
+
+.coupon_card {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #a9997f;
+  color: #fff;
+  /* border: 2px solid #a9997f; */
+}
+
+.card_name {
+  font-size: 24px;
+}
+
+.close.show {
+  height: 20px;
+  width: 20px;
+  margin-left: 250px;
+  margin-bottom: 10px;
+  right: 0;
+  text-align: center;
+  background-color: #a9997f;
+  color: #FFF;
+  border-radius: 15px;
+  font-size: 15px;
+  cursor: pointer;
 }

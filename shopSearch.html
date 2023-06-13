@@ -10,9 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/logInCheck.js"></script>
     <script type="text/javascript"
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACRSQUOjJXeqGrOaoYZL91CdDODuk_GKU"></script>
-    
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACRSQUOjJXeqGrOaoYZL91CdDODuk_GKU"></script>
+
     <title>門市查詢-斜陽館</title>
 </head>
 
@@ -22,16 +28,25 @@
         <div id="topbarLeft">
             <a class="logo" href="index.html">斜陽館<label style="font-size: 0.7vw;margin-left: 1vw;"></label></a>
         </div>
-        <div>
+        <div class="topBarRight">
             <ul id="linkBar">
                 <li><a class="part" href="product.html">產品一覽</a></li>
                 <li><a class="part" href="shopping.html">線上選購</a></li>
                 <li><a class="part" href="shopSearch.html">門市查詢</a></li>
                 <li><a class="part" href="franchise.html">加盟專區</a></li>
-                <li><a class="part" href="member.html">會員專區</a></li>
-                <li><a class="part" href="">登出</a></li>
-            </ul>
+                <div class="dropdown">
+                    <a id="member" class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                        id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        會員專區
+                    </a>
 
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item part" href="member.html">會員資料</a></li>
+                        <li><a class="dropdown-item part" href="order.html">訂單紀錄</a></li>
+                    </ul>
+                </div>
+                <li><a id="logIn" class="part" href="logIn.html">登入</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -41,23 +56,23 @@
         <div id="text">
             <h3>
                 <select id="city" onchange="getCity();">
-                <option>請選擇縣市</option>
-                <option>台北市</option>
-                <option>台中市</option>
-                <option>台南市</option>
-                <option>高雄市</option>
+                    <option>請選擇縣市</option>
+                    <option>台北市</option>
+                    <option>台中市</option>
+                    <option>台南市</option>
+                    <option>高雄市</option>
                 </select>
                 &emsp;
                 <select id="area" onchange="getArea()">
-                <option>請選擇區域</option>
+                    <option>請選擇區域</option>
                 </select>
                 &emsp;
                 <button id="Btn" onclick="search()">確認</button>
-    
-            
+
+
             </h3>
-    
-    </div>
+
+        </div>
 
         <table id="table">
             <thead>
@@ -68,36 +83,36 @@
                 </tr>
             </thead>
             <tbody>
-                
+
             </tbody>
         </table>
 
     </div>
     <div id="map"></div>
     <script>
-    google.maps.event.addDomListener(window, 'load', initialize());
+        google.maps.event.addDomListener(window, 'load', initialize());
 
-    function initialize() {
+        function initialize() {
 
-        var mapOptions = {
-        center: { lat: 25.0374865, lng: 121.5647688 },
-        zoom: 8
-        };
-        map = new google.maps.Map(document.getElementById('map'), mapOptions);
-        
-        //conArray.forEach(function(obj) {
-        //let latLng = new google.maps.LatLng(obj.coor[0], obj.coor[1]);
-        //let marker = new google.maps.Marker({
-        //  position: latLng,
-        //  map: map,
-        //  title: obj.des
-        // });
-        
-        //});
+            var mapOptions = {
+                center: { lat: 25.0374865, lng: 121.5647688 },
+                zoom: 8
+            };
+            map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-    }
+            //conArray.forEach(function(obj) {
+            //let latLng = new google.maps.LatLng(obj.coor[0], obj.coor[1]);
+            //let marker = new google.maps.Marker({
+            //  position: latLng,
+            //  map: map,
+            //  title: obj.des
+            // });
 
-</script>
+            //});
+
+        }
+
+    </script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
@@ -109,8 +124,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ"
         crossorigin="anonymous"></script>
-   
-    
+
+
     <script type="text/javascript" src="js/shopInfo.js"></script>
 
 </body>

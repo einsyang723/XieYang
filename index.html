@@ -20,7 +20,11 @@
   <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"></script>
   <!-- <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script> -->
+  <script type="text/javascript" src="js/logInCheck.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
   <script type="text/javascript" src="js/load.js"></script>
   <title>斜陽館</title>
@@ -32,16 +36,25 @@
     <div id="topbarLeft">
       <a class="logo" href="index.html">斜陽館<label style="font-size: 0.7vw;margin-left: 1vw;"></label></a>
     </div>
-    <div>
+    <div class="topBarRight">
       <ul id="linkBar">
         <li><a class="part" href="product.html">產品一覽</a></li>
         <li><a class="part" href="shopping.html">線上選購</a></li>
         <li><a class="part" href="shopSearch.html">門市查詢</a></li>
         <li><a class="part" href="franchise.html">加盟專區</a></li>
-        <li><a class="part" href="member.html">會員專區</a></li>
+        <div class="dropdown">
+          <a id="member" class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            會員專區
+          </a>
+
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item part" href="member.html">會員資料</a></li>
+            <li><a class="dropdown-item part" href="order.html">訂單紀錄</a></li>
+          </ul>
+        </div>
         <li><a id="logIn" class="part" href="logIn.html">登入</a></li>
       </ul>
-
     </div>
   </nav>
 

@@ -24,8 +24,8 @@
     integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/logInCheck.js"></script>
-  <script type="text/javascript" src="js/member.js"></script>
-  <title>會員資料-斜陽館</title>
+  <script type="text/javascript" src="js/radioChange.js"></script>
+  <title>訂單紀錄-斜陽館</title>
 </head>
 
 
@@ -55,8 +55,38 @@
       </ul>
     </div>
   </nav>
-
-  <div class="wrapper">
+  <div id="radio">
+    <label><input type="radio" name="pattern" value="hasAlreadyPaid" checked="checked"
+        onclick="hasAlreadyPaid(event)"><span class="round button">已付款</span></label>
+    <label><input type="radio" name="pattern" value="notYet" onclick="notYet(event)"><span
+        class="round button">未付款</span></label>
+  </div>
+  <div class="c-sec">
+    <section class="change l-hasAlreadyPaid">
+      <table id="table-hasAlreadyPaid">
+        <thead>
+          <tr>
+            <th>來店時間</th>
+            <th>商品</th>
+            <th>桌號</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+    <section class="change l-notYet" style="display: none;">
+      <table id="table-notYet">
+        <thead>
+          <tr>
+            <th>來店時間</th>
+            <th>商品</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </div>
+  <!-- <div class="wrapper">
     <div class="c-member">
       <div class="photo_wrapper">
         <div class="photo">
@@ -67,37 +97,33 @@
           <iframe src="img/icon/crown-solid.svg"></iframe>
           <div class="card-name">斜陽卡</div>
         </div>
-        <progress id="level" value="10" max="100"></progress>
-        <p class="cost">10/100</p>
-        <div class="discount coin">
+        <progress value="10" max="100"></progress>
+        <p>10/100</p>
+        <div class="discount">
           <div class="front">
             <iframe src="img/icon/coins-solid.svg"></iframe>
             <div class="text">折扣點數</div>
           </div>
-          <div class="back text coin_text">1點</div>
+          <div class="back text">1點</div>
         </div>
-        <div class="discount coupon">
+        <div class="discount">
           <div class="front">
             <iframe src="img/icon/ticket-simple-solid.svg"></iframe>
             <div class="text">我的券匣</div>
           </div>
           <div class="back">
-            <div class="back text coupon_text">1張</div>
+            <div class="back text">1張</div>
           </div>
         </div>
         <div class="barcode">
           <img src="img/icon/1234567890ABC.png" alt="條碼">
         </div>
       </div>
-      <div id="jumpCoupon" class="jumpCoupon">
-        <div class="close">x</div>
-      </div>
-
 
 
     </div>
 
-  </div>
+  </div> -->
 
 </body>
 
